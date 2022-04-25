@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --clr-dark-cyan: hsl(185, 75%, 39%);
+    --clr-very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --clr-dark-greyish-blue: hsl(227, 10%, 46%);
+    --clr-dark-grey: hsl(0, 0%, 59%);
+    --clr-dark-grey-hr: hsla(0, 0%, 85%);
+    --fs-name-stats: 18px;
+    --fw-normal: 400;
+    --fw-bold: 700;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -3;
+    background: var(--clr-dark-cyan);
+    color: var(--clr-very-dark-desaturated-blue);
+    font-family: 'Kumbh Sans', sans-serif;
+    
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: -75%;
+    left: -30.5%;
+    background: url(../images/bg-pattern-top.svg) no-repeat;
+    transform: rotate(90deg) rotateY(180deg);
+    z-index: -1;
+  }
+  
+  body::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(../images/bg-pattern-bottom.svg) no-repeat;
+    bottom: -56%;
+    right: -45%;
+    z-index: 0;
+  }
+
+main {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    width: fit-content;
+    border-radius: 15px;
+    z-index: 999;
+    width: auto;
+}
+
+.card-bg img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.profile-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-section img {
+    position: absolute;
+    top: 6rem;
+    right: 7.6rem;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+
+.profile-name {
+    padding-top: 5rem;
+    font-size: var(--fs-name-stats);
+    font-weight: var(--fw-bold);
+    padding-bottom: .5rem;
+}
+
+.profile-name span {
+    color: var(--clr-dark-greyish-blue);
+    font-weight: var(--fw-normal);
+}
+
+.profile-adress {
+    font-size: .85rem;
+    text-align: center;
+    padding-bottom: 1.5rem;
+    color: var(--clr-dark-greyish-blue);
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--clr-dark-grey-hr);
+    width: 100%;
+}
+
+.number-section {
+    display: flex;
+    justify-content: space-around;
+    width: 85%;
+    padding: 1.7rem 0 1.7rem 0;
+    text-align: center;
+}
+
+.number-section h2 {
+    font-size: var(--fs-name-stats);
+    font-weight: var(--fw-bold);
+    padding-bottom: .3rem;
+}
+
+.number-section p {
+    font-size: .6rem;
+    letter-spacing: .1rem;
+}
